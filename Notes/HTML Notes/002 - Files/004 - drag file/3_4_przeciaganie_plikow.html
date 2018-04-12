@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<head>
+<meta charset="utf-8">
+<title>Przeciąganie</title>
+
+<link rel="stylesheet" type="text/css" href="style.css" />
+
+<script type="text/javascript">
+	
+	function init(){
+		document.getElementById("zrzut").addEventListener("dragover",obsluzDragover,false);
+		document.getElementById("zrzut").addEventListener("drop",obsluzDrop,false);
+	}
+
+	function obsluzDragover(e){
+		e.preventDefault();
+		return false;
+	}
+	
+	function obsluzDrop(e){
+		e.preventDefault();
+		
+		var plik = e.dataTransfer.files[0];
+		alert(plik.name);
+	}
+	
+	window.onload = function(){
+		init();
+	}
+	
+</script>
+
+</head>
+
+<body>
+
+
+    <div id="zrzut">
+    </div>
+    
+</body>
+</html>

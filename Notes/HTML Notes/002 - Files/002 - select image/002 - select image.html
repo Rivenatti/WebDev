@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<head>
+<meta charset="utf-8">
+<title>File Reader</title>
+
+<script type="text/javascript">
+
+	function init(){
+		document.getElementById("file").addEventListener("change",changeFile);
+	}
+
+	window.addEventListener("load",init);
+	
+	function changeFile(file){
+		var newFile = file.target.files[0];
+		
+		if(!newFile.type.match("image/*") ){
+			alert("To nie jest plik obrazka");
+			return;
+		}
+		
+		var reader = new FileReader();
+		
+		reader.onload = function(event){
+			var content = event.target.result;
+			
+			var image = new Image();
+			image.src = event.target.result;
+			document.getElementById("content").appendChild(image);
+			
+		}
+		
+		reader.readAsDataURL(newFile);
+		
+	}
+
+</script>
+
+</head>
+
+<body>
+
+    <input type="file" id="file" />
+    <div id="content"></div>
+
+</body>
+</html>
