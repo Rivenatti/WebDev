@@ -1,10 +1,10 @@
 body{
     margin: 0;
     padding: 0;
-    background: url("Mountains_background_2.png");
+    background-color: grey;
     background-size: cover;
     background-attachment: fixed;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     background-position: center;
 }
 
@@ -41,8 +41,4 @@ label.error {
     color: #FF0000;
     font-weight: bold;
     text-align: left;
-}
-
-@media only screen and (min-width : 320px) and (max-width : 480px) {
-	background: url("Mountains_background_2.png") no-repeat center center fixed;
 }
