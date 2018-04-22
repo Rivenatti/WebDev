@@ -38,7 +38,7 @@
                                          
                <div class="form-group form-inline">
                     <label for="chars" class="label-control col-4 col-sm-3">characters</label>
-                    <input type="number" id="characters" class="form-control col-2 col-sm-2" value=4>
+                    <input type="number" id="characters" class="form-control col-2 col-sm-2" value=8>
                     <small id="charactersHelpInline" class="text-danger col-6 col-sm-7">
                         <b>Must be 4-20 characters long.</b>
                     </small>
@@ -49,7 +49,7 @@
                   <label class="custom-control-label" for="lowercase">lowercase</label>
                 </div>
                 <div class="custom-control custom-checkbox">
-                  <input type="checkbox" class="custom-control-input" id="uppercase">
+                  <input type="checkbox" class="custom-control-input" id="uppercase" checked>
                   <label class="custom-control-label" for="uppercase">uppercase</label>
                 </div>
                 <div class="custom-control custom-checkbox">
@@ -57,7 +57,7 @@
                   <label class="custom-control-label" for="numbers">numbers [0-9]</label>
                 </div>
                 <div class="custom-control custom-checkbox">
-                  <input type="checkbox" class="custom-control-input" id="special">
+                  <input type="checkbox" class="custom-control-input" id="special" checked>
                   <label class="custom-control-label" for="special">special [@,#,$,...]</label>
                 </div>
             </div><!-- COL --> 
@@ -67,6 +67,12 @@
         <div class="row">                
                 <div class="form-group col-6 offset-3">
                     <button class="btn btn-primary btn-block" id="generate">GENERATE</button>
+                    <small id="formFillInline" class="text-danger col-6 col-sm-7">
+                        <b>Fill the form first, please.</b>
+                    </small>
+                    <small id="formCharsInline" class="text-danger col-6 col-sm-7">
+                        <b>Wrong characters range.</b>
+                    </small>
                 </div><!-- FORM-GROUP -->
             </div><!-- ROW -->                 
         </div><!-- CONTAINER -->

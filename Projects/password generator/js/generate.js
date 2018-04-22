@@ -1,6 +1,19 @@
 $(document).ready(function(){
-
+    
     $('#generate').click(function(){
+        
+        if( ($('#characters').val() == "") ||
+        (($('#lowercase').is(':checked') == false) &&
+        ($('#uppercase').is(':checked') == false) &&
+        ($('#numbers').is(':checked') == false) &&
+        ($('#special').is(':checked') == false)) ){
+        
+        $('#formFillInline').show();
+        }else if(($('#characters').val() < 4) || ($('#characters').val() > 20)){
+            $('#formCharsInline').show();
+        }else{
+        $('#formFillInline').hide();
+        $('#formCharsInline').hide();
         
         // Variables
         var characters = $('#characters').val();
@@ -49,7 +62,7 @@ $(document).ready(function(){
         }
         
         $('#password').html(shuffleWord(password));
-        
+    }
     }); // end #generate
 
 
