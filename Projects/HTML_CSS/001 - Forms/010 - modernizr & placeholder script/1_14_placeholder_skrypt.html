@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<head>
+<meta charset="utf-8">
+<title>Form</title>
+
+<script type="text/javascript" src="scripts/modernizr.custom.49736.js"></script>
+<script type="text/javascript" src="scripts/placeholder.min.js"></script>
+
+</head>
+
+<body>
+
+    <h1>Form</h1>
+    
+    <form action="#" method="get">
+    	<p><label for="firstName">First Name </label><input name="firstName" type="text" id="firstName" placeholder="Your first name"/></p>
+        <p><label for="secondName">Second Name </label><input name="secondName" type="text" id="secondName" placeholder="Your second name"/></p>
+        <p><input type="submit" value="Submit" id="submit" /></p>
+    </form>
+
+<script type="text/javascript">
+
+	if(Modernizr.input.placeholder){
+	} else {
+		Placeholder.init({
+			placeholder: "#FF0000",
+			wait: true
+			});
+	}
+
+</script>
+
+</body>
+</html>

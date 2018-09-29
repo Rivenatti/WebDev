@@ -1,0 +1,69 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  height: 100%;
+  width: 100%;
+}
+
+nav {
+  text-align: left;
+  text-transform: uppercase;
+}
+
+header .navbar__logo {
+  background-color: orange;
+  text-align: center;
+  line-height: 35px;
+  display: block;
+}
+
+header .navbar__label {
+  line-height: 35px;
+  position: absolute;
+  top: 0;
+  left: 10px;
+}
+
+#navbar__checkbox,
+.navbar__label--close {
+  display: none;
+}
+
+.navbar__side {
+  position: absolute;
+  background-color: rgb(255, 207, 75);
+  height: calc(100vh - 35px);
+  width: 25%;
+  left: -25%;
+  transition: left 500ms ease-in-out;
+}
+
+.navbar__side ul {
+  list-style: none;
+}
+
+.navbar__side ul li {
+  padding: 8px 0;
+  border-bottom: 1px dashed orangered;
+  text-align: center;
+}
+
+.navbar__side ul li a {
+  color: black;
+  text-decoration: none;
+}
+
+#navbar__checkbox:checked ~ .navbar__side {
+  transition: left 500ms ease-in-out;
+  left: 0;
+}
+
+#navbar__checkbox:checked ~ .navbar__label .navbar__label--close {
+  display: block;
+}
+
+#navbar__checkbox:checked ~ .navbar__label .navbar__label--open {
+  display: none;
+}
