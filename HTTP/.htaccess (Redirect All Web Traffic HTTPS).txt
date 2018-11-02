@@ -1,0 +1,9 @@
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+
+
+(!!)Note this will redirect using the 301 'permanently moved' redirect, which will help transfer your SEO rankings.
+
+To redirect using the 302 'temporarily moved' change [R=302,L]
